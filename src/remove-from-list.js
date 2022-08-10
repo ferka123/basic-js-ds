@@ -34,28 +34,3 @@ function removeKFromList(l, k) {
 module.exports = {
   removeKFromList
 };
-
-
- class ListNode {
-     constructor(x) {
-      this.value = x;
-       this.next = null;
-     }
-   }
-
-function convertArrayToList(arr) {
-  return arr.reverse().reduce((acc, cur) => {
-    if (acc) {
-      const node = new ListNode(cur);
-      node.next = acc;
-      return node;
-    }
-
-    return new ListNode(cur);
-  }, null);
-}
-
-const list = convertArrayToList([1,2,2,4]);
-console.log(list)
-removeKFromList(list,2)
-console.log(list)
